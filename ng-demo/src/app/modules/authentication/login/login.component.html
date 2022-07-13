@@ -1,0 +1,24 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <h1 class="h3 mb-3 fw-normal text-center">Please sign in</h1>
+    <div class="form-group  mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" formControlName="email" aria-describedby="emailHelp" [ngClass]="{'is-invalid':email?.invalid && (email?.touched || email?.dirty || submitted)}"
+            type="email" placeholder="Enter E-mail address" />
+        <div *ngIf="email!.errors" class="invalid-feedback">
+            <span *ngIf="email!.errors!['required']">Email is required.</span>
+            <span *ngIf="email!.errors!['pattern']">Email is not valid.</span>
+        </div>
+    </div>    
+    <div class="form-group mb-3">
+        <label for="email" class="form-label">Password</label>
+        <input type="password" class="form-control" formControlName="password" [ngClass]="{'is-invalid':password?.invalid && (password?.touched || password?.dirty || submitted)}"
+            placeholder="Enter Password" />
+        <div *ngIf="password!.errors" class="invalid-feedback">
+            <span *ngIf="password!.errors!['required']">Password is required.</span>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="form-text">
+        Use email as eve.holt@reqres.in & password as cityslicka
+    </div>
+</form>
