@@ -4,4 +4,5 @@ export class APIUrls {
     public static APIBaseURL = environment.apiURL;
 
     public static login = `${APIUrls.APIBaseURL}/login`;
+    public static users = `${APIUrls.APIBaseURL}/users`;
 }

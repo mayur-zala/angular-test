@@ -1,5 +1,6 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../node_modules/ngx-spinner/animations/ball-clip-rotate-multiple.css";
+@import "../node_modules/ngx-toastr/toastr.css";
 html,
 body {
     height: 100%;
@@ -34,4 +35,10 @@ body {
 
 .form-signin input[type="password"] {
     margin-bottom: 10px;
+}
+
+.list-table{
+    th{
+        cursor: pointer;
+    }
 }

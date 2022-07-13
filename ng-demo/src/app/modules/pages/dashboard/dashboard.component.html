@@ -1,1 +1,27 @@
-<p>dashboard works!</p>
+<div class="row">
+    <p class="text-muted">Click on column header to sort column</p>
+    <div class="col-xl-12">
+        <table class="table list-table">
+            <thead>
+                <tr>
+                    <th (click)="sortList('id')" scope="col">ID</th>
+                    <th (click)="sortList('email')" scope="col">Email</th>
+                    <th (click)="sortList('first_name')" scope="col">First name</th>
+                    <th (click)="sortList('last_name')" scope="col">Last name</th>
+                    <th scope="col">Avatar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <th scope="row">{{user.id}}</th>
+                    <td>{{user.email}}</td>
+                    <td>{{user.first_name}}</td>
+                    <td>{{user.last_name}}</td>
+                    <td>
+                        <img src="{{user.avatar}}" alt="Avtar Image">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -18,9 +18,7 @@ export class HttpErrorInterceptor implements HttpInterceptor {
             .pipe(
                 tap((event: HttpEvent<any>) => {
                     if (event instanceof HttpResponse) {
-                        if (event.status === HttpStatusCode.Ok) {
-                            this.spinnerService.hide();
-                        }
+                        this.spinnerService.hide();
                     }
                 }),
                 catchError((error: HttpErrorResponse) => {
